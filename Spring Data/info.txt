@@ -1,4 +1,0 @@
-In this directory I will upload the exercises that I've made during the course.
-
-
-https://softuni.bg/trainings/4366/spring-data-february-2024
