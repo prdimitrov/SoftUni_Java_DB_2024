@@ -6,7 +6,6 @@ import bg.softuni._15_Spring_Data_Auto_Mapping_Objects.entities.dtos.EmployeeDTO
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeMap;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
@@ -28,7 +27,7 @@ public class ModelMapperMain implements CommandLineRunner {
         TypeMap<Employee, EmployeeDTO> typeMap = modelMapper.createTypeMap(Employee.class, EmployeeDTO.class);
 //        typeMap.validate();
         typeMap.addMappings(mapping -> mapping.map(
-                source -> source.getAddress().getCity(), EmployeeDTO::setCity));
+                source -> source.getAddress().getCity(), EmployeeDTO::setAddressCity));
         typeMap.validate();
         Address address = new Address("Bulgaria", "Sofia");
         Employee employee = new Employee("First", BigDecimal.TEN, address);

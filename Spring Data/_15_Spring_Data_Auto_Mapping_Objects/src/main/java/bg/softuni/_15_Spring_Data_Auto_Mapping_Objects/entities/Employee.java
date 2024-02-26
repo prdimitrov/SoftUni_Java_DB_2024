@@ -17,9 +17,8 @@ public class Employee {
     private String lastName;
     @Column(nullable = false)
     private BigDecimal salary;
-    @Column(nullable = false)
-    private LocalDate birthDay;
-    @ManyToOne(optional = false) //задължително трябва да имаме адрес
+    private LocalDate birthday;
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST) //задължително трябва да имаме адрес
     private Address address;
 
     public Employee() {
@@ -63,12 +62,12 @@ public class Employee {
         this.salary = salary;
     }
 
-    public LocalDate getBirthDay() {
-        return birthDay;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setBirthDay(LocalDate birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthday(LocalDate birthDay) {
+        this.birthday = birthDay;
     }
 
     public Address getAddress() {
