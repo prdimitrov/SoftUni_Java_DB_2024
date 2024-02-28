@@ -1,7 +1,11 @@
 package bg.softuni._15_Spring_Data_Auto_Mapping_Objects.entities.dtos;
 
+import com.google.gson.annotations.Expose;
+
 public class AddressDTO {
+    @Expose
     private String country;
+    @Expose
     private String city;
 
     public AddressDTO(String country, String city) {

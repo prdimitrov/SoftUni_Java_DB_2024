@@ -1,13 +1,19 @@
 package bg.softuni._15_Spring_Data_Auto_Mapping_Objects.entities.dtos;
 
+import com.google.gson.annotations.Expose;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class CreateEmployeeDTO {
+    @Expose
     private final String firstName;
     private final String lastName;
+    @Expose
     private final BigDecimal salary;
+    @Expose
     private final LocalDate birthday;
+    @Expose
     private final AddressDTO address;
 
     public CreateEmployeeDTO(String firstName, String lastName, BigDecimal salary, LocalDate birthday, AddressDTO address) {
